@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-	font-size: calc(16px + 0.5vw);
+	font-size: calc(16px + 1vw);
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 }
@@ -48,16 +48,23 @@ main {
 
 .fifty {
 	width: 50%;
-	height: 100vh;
+	
 }
 
 .left {
+height: 100vh;
 	position: fixed;
 	top: 0;
 	left: 0;
 	background-image: url(assets/49.gif);
 	background-size: cover;
 	background-position: center center;
+	padding: 15px;
+	h1 {
+		color: blue;
+		font-weight: bold;
+		font-style: normal;
+	}
 }
 
 .right {
@@ -85,4 +92,8 @@ padding: 15px;
 img {
 	max-width: 500px;
 	width: 100%;
+}
+
+.right span {
+	display: block;
 }

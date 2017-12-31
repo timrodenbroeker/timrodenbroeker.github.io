@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-size: calc(16px + 0.5vw);
+  font-size: calc(16px + 1vw);
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
 
@@ -29,16 +29,21 @@ h1 {
   position: relative; }
 
 .fifty {
-  width: 50%;
-  height: 100vh; }
+  width: 50%; }
 
 .left {
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   background-image: url(assets/49.gif);
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  padding: 15px; }
+  .left h1 {
+    color: blue;
+    font-weight: bold;
+    font-style: normal; }
 
 .right {
   background: blue;
@@ -61,3 +66,6 @@ h1 {
 img {
   max-width: 500px;
   width: 100%; }
+
+.right span {
+  display: block; }
