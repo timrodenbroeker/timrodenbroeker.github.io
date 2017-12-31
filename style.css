@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-size: calc(16px + 1vw);
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 300; }
+
+a {
+  text-decoration: none;
+  font-style: italic;
+  color: blue; }
+
+a:hover {
+  color: black; }
+
+body, html {
+  background: #f1f1f1;
+  text-transform: lowercase;
+  color: blue;
+  font-family: sans-serif;
+  background-size: cover; }
+
+h1 {
+  font-style: italic;
+  margin: 0;
+  display: block; }
