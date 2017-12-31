@@ -107,9 +107,13 @@ display: block;
 
 .meta,
 .meta a {
-	font-size: 16px;
+	color: black;
+}
+
+.meta a:hover {
+	color: #f1f1f1;
 }
 
 .title {
-	font-weight: 700;
+	
 }

@@ -75,7 +75,7 @@ img {
 
 .meta,
 .meta a {
-  font-size: 16px; }
+  color: black; }
 
-.title {
-  font-weight: 700; }
+.meta a:hover {
+  color: #f1f1f1; }
