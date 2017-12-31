@@ -2,11 +2,10 @@
   box-sizing: border-box;
   font-size: calc(16px + 1vw);
   font-family: "Roboto", sans-serif;
-  font-weight: 400; }
+  font-weight: 300; }
 
 a {
   text-decoration: none;
-  font-style: italic;
   color: #f1f1f1; }
 
 a:hover {
@@ -21,7 +20,6 @@ body, html {
   background-size: cover; }
 
 h1 {
-  font-style: italic;
   margin: 0;
   display: block; }
 
@@ -29,7 +27,8 @@ h1 {
   position: relative; }
 
 .fifty {
-  width: 50%; }
+  width: 50%;
+  min-height: 100vh; }
 
 .left {
   height: 100vh;
@@ -42,7 +41,7 @@ h1 {
   padding: 15px; }
   .left h1 {
     color: blue;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal; }
 
 .right {
@@ -69,3 +68,11 @@ img {
 
 .right span {
   display: block; }
+
+.meta {
+  margin-top: 5px;
+  display: block; }
+
+.meta,
+.meta a {
+  font-size: 16px; }
