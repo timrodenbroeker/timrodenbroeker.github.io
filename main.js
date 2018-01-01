@@ -16,6 +16,8 @@
     	return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
+	var mode = getRandomInt(1, 3);
+
 	var a = getRandomInt(1,8);
 
 	// Scrolling
@@ -29,14 +31,31 @@
 
 		$('.left').attr('style',string);
 
-
-		$('.leftInner').css({
-			'-webkit-transform' : 'scale(' + scaling + ') rotateY(' + rotation + 'deg)',
-  			'-moz-transform'    : 'scale(' + scaling + ') rotateY(' + rotation + 'deg)',
-  			'-ms-transform'     : 'scale(' + scaling + ') rotateY(' + rotation + 'deg)',
-  			'-o-transform'      : 'scale(' + scaling + ') rotateY(' + rotation + 'deg)',
-  			'transform'         : 'scale(' + scaling + ') rotateY(' + rotation + 'deg)'
-  		});
+		if (mode == 1) {
+			$('.leftInner').css({
+				'-webkit-transform' : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg)',
+	  			'-moz-transform'    : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg)',
+	  			'-ms-transform'     : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg)',
+	  			'-o-transform'      : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg)',
+	  			'transform'         : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg)'
+	  		});
+  		} else if (mode == 2) {
+			$('.leftInner').css({
+				'-webkit-transform' : 'scale(' + scaling + ') rotateX(' + rotation + 'deg)',
+	  			'-moz-transform'    : 'scale(' + scaling + ') rotateX(' + rotation + 'deg)',
+	  			'-ms-transform'     : 'scale(' + scaling + ') rotateX(' + rotation + 'deg)',
+	  			'-o-transform'      : 'scale(' + scaling + ') rotateX(' + rotation + 'deg)',
+	  			'transform'         : 'scale(' + scaling + ') rotateX(' + rotation + 'deg)'
+	  		});  			
+  		} else if (mode == 3) {
+			$('.leftInner').css({
+				'-webkit-transform' : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg) rotateX(' + rotation + 'deg)',
+	  			'-moz-transform'    : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg) rotateX(' + rotation + 'deg)',
+	  			'-ms-transform'     : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg) rotateX(' + rotation + 'deg)',
+	  			'-o-transform'      : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg) rotateX(' + rotation + 'deg)',
+	  			'transform'         : 'scale(' + scaling + ') rotateY(' + rotation/2 + 'deg) rotateX(' + rotation + 'deg)'
+	  		});  			
+  		}
 
   		
 	});
@@ -46,7 +65,7 @@ var images = [];
 for (var i = 0; i < 13; i++){
 	images.push(i);
 
-	$('.leftInner').append('<div class="child img" id="img'+i+'" style="background-image: url(gif/'+images[i]+'.gif"></div>');
+	$('.leftInner').append('<div class="child img" id="img'+i+'" style="background-image: url(gif/1/'+images[i]+'.gif"></div>');
 }
 
 $('.left').append('<div class="logo"><h1>tim rodenbröker creative coding</h1></div>');
