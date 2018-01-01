@@ -58,15 +58,20 @@ main {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-image: url(assets/49.gif);
-	background-size: cover;
-	background-position: center center;
-	padding: 15px;
+	background-image: url(img/49.gif);
+	
 	h1 {
+		padding: 15px;
 		color: blue;
 		font-weight: 700;
 		font-style: normal;
 	}
+}
+
+.left,
+.left .img {
+	background-size: cover;
+	background-position: center center;
 }
 
 .right {
@@ -76,7 +81,6 @@ main {
 }
 
 .child {
-padding: 15px;
 	position: fixed;
 }
 
@@ -118,6 +122,12 @@ display: block;
 	
 }
 
+.img {
+	width: 50%;
+	height: 100vh;
+	display: none;
+}
+
 
 .info {
 	color: #aaaaaa;
@@ -132,3 +142,7 @@ display: block;
 	width: 20px;
 	margin-right: 10px;
 }
+
+
+
+

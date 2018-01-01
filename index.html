@@ -13,8 +13,8 @@
 
 	<main> 
 
-		<div class="fifty left">
-			<h1>tim rodenbröker creative coding</h1> 
+		<div class="fifty left relative">
+			
 		</div>
 
 
@@ -125,15 +125,31 @@
   crossorigin="anonymous"></script>
 
 <script>
-$( "a" ).mouseover(function() {
 
-	var randomNumber =Math.floor(Math.random() * (9 - 1 + 1)) + 1;
+for (var i = 0; i < 8; i++){
+	var j = i + 1;
 
-    $( ".left").css( "background-image", "url(img/" + randomNumber + ".gif)");
-  })
-  .mouseout(function() {
-  	// $( ".left").css( "background-image", "url(img/1.gif)");
-  });
+	$('.left').append('<div class="child img" id="img'+j+'" style="background-image: url(img/'+j+'.gif"></div>');
+	}
+
+	$('.left').append('<div class="child"><h1>tim rodenbröker creative coding</h1></div>');
+
+$( window ).mousemove(function( event ) {
+
+	$( ".meta a" ).mouseover(function() {
+
+		var randomNumber =Math.floor(Math.random() * (9 - 1 + 1)) + 1;
+		
+		$( ".left .img" ).css( "display", "none");
+	    
+	    $( "#img"+randomNumber).css( "display", "block");
+	  })
+
+
+	  .mouseout(function() {
+	  	// $( ".left").css( "background-image", "url(img/1.gif)");
+	  });
+});
 
 
 </script>
