@@ -25,9 +25,11 @@
 	$(window).scroll(function() {
 		var rotation = mapRange(getScrollPercent(), 0,100,0,360);
 		var scaling = mapRange(getScrollPercent(), 0,100,1,0.3);
-		var tone = Math.floor(mapRange(getScrollPercent(), 0,100,10,240));
+		var r = Math.floor(mapRange(getScrollPercent(), 0,100,10,240));
+		var g = Math.floor(mapRange(getScrollPercent(), 0,100,10,240));
+		var b = Math.floor(mapRange(getScrollPercent(), 0,100,10,240));
 
-		var string = 'background:rgb(' + tone + ', '+tone+','+ tone +')';
+		var string = 'background:rgb(' + r + ', '+ g +','+ b +')';
 
 		$('.left').attr('style',string);
 
