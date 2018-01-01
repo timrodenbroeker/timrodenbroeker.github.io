@@ -43,7 +43,7 @@
 
 var images = [];
 
-for (var i = 0; i < 14; i++){
+for (var i = 0; i < 13; i++){
 	images.push(i);
 
 	$('.leftInner').append('<div class="child img" id="img'+i+'" style="background-image: url(gif/'+images[i]+'.gif"></div>');
@@ -52,13 +52,14 @@ for (var i = 0; i < 14; i++){
 $('.left').append('<div class="logo"><h1>tim rodenbröker creative coding</h1></div>');
 
 
-$( "#img13").css( "display", "block");
-
-// Mousemove
+$( "#img11").css( "display", "block");
 
 
 
-	$( ".meta a" ).mouseenter(function() {
+
+// Interval
+
+	setInterval(function(){ 
 
 		if (a < images.length-1){
 			a++;
@@ -69,13 +70,7 @@ $( "#img13").css( "display", "block");
 		$( ".left .img" ).css( "display", "none");
 	    
 
-
 	    $( "#img"+a).css( "display", "block");
 	 console.log(a);
 
-
-	  })
-
-
-
-
+}, 1000);
