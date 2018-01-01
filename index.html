@@ -14,7 +14,11 @@
 	<main> 
 
 		<div class="fifty left relative">
-			
+
+			<div class="leftInner">
+
+
+			</div>
 		</div>
 
 
@@ -124,35 +128,7 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
 
-<script>
-
-for (var i = 0; i < 8; i++){
-	var j = i + 1;
-
-	$('.left').append('<div class="child img" id="img'+j+'" style="background-image: url(img/'+j+'.gif"></div>');
-	}
-
-	$('.left').append('<div class="child"><h1>tim rodenbröker creative coding</h1></div>');
-
-$( window ).mousemove(function( event ) {
-
-	$( ".meta a" ).mouseover(function() {
-
-		var randomNumber =Math.floor(Math.random() * (9 - 1 + 1)) + 1;
-		
-		$( ".left .img" ).css( "display", "none");
-	    
-	    $( "#img"+randomNumber).css( "display", "block");
-	  })
-
-
-	  .mouseout(function() {
-	  	// $( ".left").css( "background-image", "url(img/1.gif)");
-	  });
-});
-
-
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>
