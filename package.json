@@ -21,11 +21,13 @@
     "gulp-plumber": "^1.1.0",
     "node-sass": "^4.7.2",
     "opn": "^5.1.0",
+    "pump": "^2.0.0",
     "serve-static": "^1.13.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1"
   }
 }

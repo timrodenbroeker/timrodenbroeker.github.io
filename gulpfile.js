@@ -3,9 +3,11 @@ var plumber   = require('gulp-plumber');
 var sass      = require('gulp-sass');
 var webserver = require('gulp-webserver');
 var opn       = require('opn');
+var uglify    = require('gulp-uglify');
+var pump      = require('pump');
 
 var sourcePaths = {
-  styles: ['style.scss']
+  styles: ['scss/style.scss']
 };
 
 var distPaths = {
@@ -16,6 +18,17 @@ var server = {
   host: 'localhost',
   port: '8001'
 }
+
+
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('js/*.js'),
+        uglify(),
+        gulp.dest('')
+    ],
+    cb
+  );
+});
 
 gulp.task('sass', function () {
   gulp.src( sourcePaths.styles )
@@ -44,5 +57,5 @@ gulp.task('watch', function(){
 
 gulp.task('build', ['sass']);
 
-gulp.task('default', ['build', 'webserver', 'watch', 'openbrowser']);
+gulp.task('default', ['compress','build', 'webserver', 'watch', 'openbrowser']);
 
